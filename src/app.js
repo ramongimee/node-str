@@ -8,8 +8,11 @@ const app = express();
 
 // Connecta ao banco
 mongoose.connect('mongodb+srv://ramon:ramon@ndstr-fyrhw.azure.mongodb.net/test?retryWrites=true&w=majority',
-{useNewUrlParser: true,
-    useCreateIndex:true});
+    {
+        useNewUrlParser: true,
+        useCreateIndex: true,
+        useFindAndModify: false
+    });
 
 //Carrega os Models
 const Product = require('./models/product');
