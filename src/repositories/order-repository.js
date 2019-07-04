@@ -9,9 +9,9 @@ exports.get = async () => {
         .populate('customer','name')
         .populate('items.product', 'title');
     return res;
-}
+};
 
 exports.create = async (data) => {
     var order = new Order(data);
     await order.save();
-}
+};
